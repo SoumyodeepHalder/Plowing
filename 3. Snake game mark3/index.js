@@ -1,56 +1,57 @@
 function goRight(){
     console.log("now i is "+i+" going right")
-    document.getElementsByClassName('box')[i].style.background = "rgb(234,234,234)";
+    document.getElementsByClassName('box')[i].style.background = canvasColor;
     console.log("box no:"+i+" is coloured white")
     i += 1;
     if (i%34==0){
         console.log('now i= '+i+ " so making it 0 again" )
         i=i-34
     };
-    document.getElementsByClassName('box')[i].style.background = "black";
+    document.getElementsByClassName('box')[i].style.background = "white";
     console.log("box no:"+i+"is coloured black")
 }
 function goLeft(){
     console.log("now i is "+i+" going left")
-    document.getElementsByClassName('box')[i].style.background = "rgb(234,234,234)";
+    document.getElementsByClassName('box')[i].style.background = canvasColor;
     console.log("box no:"+i+" is coloured white")
     i -= 1;
     if (i%34==33||i==-1){
         console.log('now i= '+i+ " so making it 0 again" )
         i=i+34
     };
-    document.getElementsByClassName('box')[i].style.background = "black";
+    document.getElementsByClassName('box')[i].style.background = "white";
     console.log("box no:"+i+"is coloured black")
 }
 function goDown(){
     console.log("now i is "+i+" going down")
-    document.getElementsByClassName('box')[i].style.background = "rgb(234,234,234)";
+    document.getElementsByClassName('box')[i].style.background = canvasColor;
     console.log("box no:"+i+" is coloured white")
     i += 34;
     if (i>=612){
         console.log('now i= '+i+ " so making it 0 again" )
         i=i-612
     };
-    document.getElementsByClassName('box')[i].style.background = "black";
+    document.getElementsByClassName('box')[i].style.background = "white";
     console.log("box no:"+i+"is coloured black")
 }
 function goUp(){
     console.log("now i is "+i+" going right till i<33 ")
-    document.getElementsByClassName('box')[i].style.background = "rgb(234,234,234)";
+    document.getElementsByClassName('box')[i].style.background = canvasColor;
     console.log("box no:"+i+" is coloured white")
     i -= 34;
     if (i<0){
         console.log('now i= '+i+ " so making it 0 again" )
         i=i+612
     };
-    document.getElementsByClassName('box')[i].style.background = "black";
+    document.getElementsByClassName('box')[i].style.background = "white";
     console.log("box no:"+i+"is coloured black")
 }
 
 var i = 0;
 var fps = 300;
 var move;
-document.getElementsByClassName('box')[i].style.background = "black"
+var canvasColor="rgb(10,10,10)"
+document.getElementsByClassName('box')[i].style.background = "white"
 addEventListener('keydown', e => {
     console.log(e.key, "event happened")
     clearInterval(move)
