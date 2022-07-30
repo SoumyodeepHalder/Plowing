@@ -1,5 +1,3 @@
-
-
 var i=0;
 var move;
 document.getElementsByClassName('box')[i].style.background="black"
@@ -31,4 +29,3 @@ addEventListener('keydown', e=>{
         document.getElementsByClassName('box')[i].style.background="black"
     }
 })
-// clearInterval(move)
